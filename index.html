@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA • Luxury Unisex Salon & Bridal Atelier</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        caviar: {
+                            800: '#262220',
+                            900: '#1C1917',
+                            950: '#141210',
+                        },
+                        champagne: {
+                            100: '#FDF8F2',
+                            200: '#F5EBDD',
+                            300: '#E8D5BC',
+                            400: '#D8BC97',
+                            500: '#C6A374',
+                            600: '#AD8754',
+                            700: '#8E6B3C',
+                        },
+                        blush: {
+                            50: '#FCFAF8',
+                            100: '#F7F3EE',
+                            200: '#EFE8DE',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FCFAF8; }
+        .font-couture { font-family: 'Cormorant Garamond', Georgia, serif; }
+        .soft-glow {
+            box-shadow: 0 25px 50px -12px rgba(173, 135, 84, 0.12);
+        }
+        .card-lift {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(28, 25, 23, 0.12);
+        }
+    </style>
+</head>
+<body class="text-caviar-900 antialiased selection:bg-champagne-500 selection:text-white">
+
+    <!-- Top Haute Couture Ribbon -->
+    <div class="bg-caviar-950 text-champagne-300 text-xs py-2.5 px-4 border-b border-champagne-700/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center justify-center gap-2">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-champagne-400"></span>
+                <span class="tracking-wide">Bridal Season Privilege: <strong>Complimentary 24K Gold Kérastase Hair Ritual</strong> with Every Bridal Booking</span>
+            </div>
+            <div class="flex items-center gap-6 text-[11px] sm:text-xs text-stone-300 font-medium">
+                <span>📍 C-Scheme, Jaipur & Greater Kailash, Delhi</span>
+                <a href="tel:+919876543210" class="text-champagne-400 font-bold hover:underline">📞 +91 98765 43210</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Editorial Floating Header -->
+    <header class="sticky top-0 z-40 bg-blush-50/90 backdrop-blur-md border-b border-stone-200/70 transition-all">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-full bg-caviar-900 text-champagne-300 flex items-center justify-center font-couture text-2xl font-normal border border-champagne-500/40 shadow-sm group-hover:scale-105 transition-transform">
+                    A
+                </div>
+                <div>
+                    <span class="font-couture text-2xl sm:text-3xl tracking-[0.18em] font-medium text-caviar-900 block leading-none">AURA</span>
+                    <span class="block text-[8px] sm:text-[9px] font-bold uppercase tracking-[0.3em] text-champagne-600 mt-1">Haute Salon & Bridal Atelier</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Items -->
+            <nav class="hidden lg:flex items-center gap-9 text-xs font-bold uppercase tracking-widest text-stone-600">
+                <a href="#services" class="hover:text-champagne-600 transition-colors">Hair & Color</a>
+                <a href="#bridal" class="hover:text-champagne-600 transition-colors">Bridal Suite</a>
+                <a href="#atelier" class="hover:text-champagne-600 transition-colors">The Atelier</a>
+                <a href="#artists" class="hover:text-champagne-600 transition-colors">Master Artists</a>
+                <a href="#pricing" class="hover:text-champagne-600 transition-colors">Experiences</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/919876543210?text=Hello%20AURA%20Salon,%20I%20would%20like%20to%20reserve%20an%20appointment." target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-caviar-900 px-4 py-2 rounded-full border border-stone-300 hover:border-champagne-600 transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    WhatsApp Concierge
+                </a>
+                <button onclick="openModal()" class="px-6 py-2.5 rounded-full bg-caviar-900 hover:bg-caviar-800 text-champagne-200 font-bold text-xs uppercase tracking-wider shadow-sm transition-all">
+                    Book Service
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section (Vogue Aesthetic) -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Editorial Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-champagne-200/70 border border-champagne-400/40 text-caviar-900 text-xs font-bold uppercase tracking-widest">
+                        <span>✦</span>
+                        <span>Parisian Artistry • Beverly Hills Elegance</span>
+                    </div>
+
+                    <h1 class="font-couture text-5xl sm:text-7xl lg:text-[76px] font-normal text-caviar-950 tracking-tight leading-[1.08]">
+                        Where haute hair couture meets <br class="hidden sm:inline">
+                        <span class="italic text-champagne-600 font-normal">unapologetic luxury.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Step into an acoustic sanctuary designed for transformative beauty. From bespoke French Balayage and Russian manicures to royal bridal trousseau styling, your glow is crafted by master artisans.
+                    </p>
+
+                    <!-- Interactive Quick Appointment Bar -->
+                    <div class="bg-white p-3 rounded-2xl sm:rounded-full border border-stone-200 soft-glow max-w-xl mx-auto lg:mx-0 flex flex-col sm:flex-row items-center gap-2">
+                        <div class="flex-1 w-full px-4 py-1.5 text-left">
+                            <label class="block text-[9px] font-bold uppercase tracking-wider text-stone-400">Select Ritual</label>
+                            <select id="quickService" class="w-full text-xs sm:text-sm font-semibold text-caviar-900 bg-transparent focus:outline-none cursor-pointer">
+                                <option value="Bespoke French Balayage">Bespoke French Balayage & Gloss</option>
+                                <option value="Royal Bridal Haute Couture">Royal Bridal & Reception Suite</option>
+                                <option value="Kérastase Botoplex Hair Spa">Kérastase Botoplex Hair Spa</option>
+                                <option value="Hydrafacial MD 24K Glow">Hydrafacial MD 24K Gold Facial</option>
+                                <option value="Russian Gel Nail Sculpting">Russian Gel Nail Extensions</option>
+                                <option value="Gentlemen Executive Grooming">Gentlemen Executive Grooming</option>
+                            </select>
+                        </div>
+                        <div class="hidden sm:block w-[1px] h-9 bg-stone-200"></div>
+                        <div class="flex-1 w-full px-4 py-1.5 text-left">
+                            <label class="block text-[9px] font-bold uppercase tracking-wider text-stone-400">Mobile (WhatsApp)</label>
+                            <input type="tel" id="quickPhone" placeholder="Enter 10-digit number" class="w-full text-xs sm:text-sm font-semibold text-caviar-900 bg-transparent focus:outline-none placeholder-stone-400">
+                        </div>
+                        <button onclick="handleQuickBook()" class="w-full sm:w-auto px-7 py-3.5 rounded-xl sm:rounded-full bg-caviar-900 hover:bg-caviar-800 text-champagne-300 font-bold text-xs uppercase tracking-wider shrink-0 transition-all flex items-center justify-center gap-2">
+                            <span>Reserve</span>
+                            <span>➔</span>
+                        </button>
+                    </div>
+
+                    <!-- Trust Accolades -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-8 text-xs text-stone-500 font-medium">
+                        <div class="flex items-center gap-2">
+                            <span class="text-amber-500 text-sm">★★★★★</span>
+                            <span class="font-bold text-caviar-900">4.95/5</span> on Google (1,400+ Reviews)
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-champagne-600"></span>
+                            <span>Dyson Supersonic Partner Lounge</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-champagne-600"></span>
+                            <span>L'Oréal Professionnel Certified</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Visual Composition (Vogue Cover Style) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md">
+                        
+                        <!-- Main Architectural Hero Image -->
+                        <div class="rounded-[36px] overflow-hidden soft-glow border border-stone-200 bg-white p-3">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" alt="AURA Salon Luxury Experience" class="w-full h-96 sm:h-[480px] object-cover rounded-[28px]">
+                        </div>
+
+                        <!-- Floating VIP Bridal Badge -->
+                        <div class="absolute -bottom-6 -left-6 sm:-left-8 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-stone-200 soft-glow max-w-[270px] space-y-2">
+                            <div class="flex items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=120&q=80" alt="Bride" class="w-10 h-10 rounded-full object-cover border border-champagne-400">
+                                <div>
+                                    <div class="text-xs font-bold text-caviar-900 leading-tight">Avantika Singhal</div>
+                                    <div class="text-[10px] text-stone-400">Royal Destination Bride</div>
+                                </div>
+                            </div>
+                            <p class="text-[11px] text-stone-600 italic leading-snug">
+                                "The airbrush makeup lasted 18 hours through rain and dancing. AURA made me look like royalty."
+                            </p>
+                        </div>
+
+                        <!-- Floating Certification Badge -->
+                        <div class="absolute -top-4 -right-4 sm:-right-6 bg-caviar-950 text-champagne-300 px-4 py-3 rounded-2xl shadow-xl border border-champagne-600/30">
+                            <div class="font-couture text-2xl font-bold text-white">#1</div>
+                            <div class="text-[9px] uppercase font-bold tracking-widest text-champagne-400 leading-tight">
+                                Luxury Salon & <br>Bridal Lounge
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid: The 4 Pillars of AURA Atelier -->
+    <section id="atelier" class="py-24 bg-white border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <div class="max-w-2xl mx-auto text-center mb-16 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-champagne-600 bg-champagne-100 px-3.5 py-1.5 rounded-full border border-champagne-200">The Atelier Difference</span>
+                <h2 class="font-couture text-3xl sm:text-5xl font-normal text-caviar-950">Curated for the Discerning Individual</h2>
+                <p class="text-stone-500 text-sm sm:text-base">We reject crowded, noisy parlor chaos. Every station is an acoustic private pod designed for tranquility.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Bento Tile 1: (Spans 2 cols) -->
+                <div class="md:col-span-2 bg-blush-100 rounded-3xl p-8 sm:p-11 border border-stone-200 flex flex-col justify-between space-y-8 relative overflow-hidden group">
+                    <div class="space-y-3 max-w-lg z-10">
+                        <span class="text-xs font-bold uppercase tracking-widest text-champagne-700">Dyson Supersonic Stations</span>
+                        <h3 class="font-couture text-2xl sm:text-4xl text-caviar-950">Zero Heat Damage. Luminous Natural Shine.</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            We exclusively utilize Dyson Professional intelligent thermistor technology and Swiss micro-mist processors to seal hair cuticles without burning your strands.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-stone-300/80 z-10">
+                        <div>
+                            <div class="text-xl sm:text-2xl font-bold text-caviar-900">0%</div>
+                            <div class="text-xs text-stone-500">Heat Fragility</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-bold text-caviar-900">100%</div>
+                            <div class="text-xs text-stone-500">Olaplex Infused</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-bold text-caviar-900">6 Weeks</div>
+                            <div class="text-xs text-stone-500">Color Radiance</div>
+                        </div>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Hair Wash Lounge" class="absolute -right-8 -bottom-8 w-72 h-72 object-cover rounded-full opacity-20 group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                </div>
+
+                <!-- Bento Tile 2: VIP Bridal Suites -->
+                <div class="bg-caviar-950 text-stone-100 rounded-3xl p-8 sm:p-10 border border-champagne-700/40 flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-champagne-400">Exclusive Sanctum</span>
+                        <h3 class="font-couture text-2xl text-white">Private VIP Bridal Dressing Suites</h3>
+                        <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+                            Spacious private dressing chambers equipped with motorized full-length 360° mirrors, bespoke lighting simulation, and complimentary artisan refreshments.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-caviar-800 text-xs text-champagne-400 font-semibold">
+                        ✦ Complete privacy for brides and family
+                    </div>
+                </div>
+
+                <!-- Bento Tile 3: Clinical Sanitization -->
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 soft-glow space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-champagne-100 text-champagne-700 flex items-center justify-center font-bold text-sm">
+                        UV
+                    </div>
+                    <h3 class="font-couture text-xl text-caviar-950">Hospital-Grade Sterilization</h3>
+                    <p class="text-stone-500 text-xs sm:text-sm leading-relaxed">
+                        Every scissor, comb, nail clipper, and cuticle pusher is sealed in autoclave pouches and UV sanitized before touching your skin.
+                    </p>
+                </div>
+
+                <!-- Bento Tile 4: Organic Japanese Hair Care -->
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 soft-glow space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-champagne-100 text-champagne-700 flex items-center justify-center font-bold text-sm">
+                        BIO
+                    </div>
+                    <h3 class="font-couture text-xl text-caviar-950">Kérastase & Milbon Therapies</h3>
+                    <p class="text-stone-500 text-xs sm:text-sm leading-relaxed">
+                        Customized peptide hair restoration treatments imported directly from Paris and Tokyo for chemically treated or lifeless hair.
+                    </p>
+                </div>
+
+                <!-- Bento Tile 5: Russian Nail Sculpting -->
+                <div class="bg-blush-100 rounded-3xl p-8 border border-stone-200 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-stone-300 text-caviar-900 flex items-center justify-center font-bold text-sm">
+                        GEL
+                    </div>
+                    <h3 class="font-couture text-xl text-caviar-950">Russian Precision Cuticles</h3>
+                    <p class="text-stone-500 text-xs sm:text-sm leading-relaxed">
+                        E-file dry manicures that produce impeccably clean cuticle lines and chip-free gel finishes lasting upwards of 4 weeks.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Catalog (Lookbook Style) -->
+    <section id="services" class="py-24 bg-blush-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-champagne-700 bg-champagne-200 px-3.5 py-1.5 rounded-full border border-champagne-300">Haute Menu</span>
+                    <h2 class="font-couture text-4xl sm:text-6xl font-normal text-caviar-950">Signature Atelier Experiences</h2>
+                </div>
+                <p class="text-stone-500 text-sm max-w-md">Every appointment includes a comprehensive scalp/skin diagnosis and personalized bespoke formulation.</p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Service 1: French Balayage -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 soft-glow flex flex-col justify-between card-lift group">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="French Balayage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-caviar-950 text-champagne-300 font-bold text-[10px] uppercase tracking-wider px-3.5 py-1 rounded-full">Iconic Service</span>
+                        </div>
+                        <div class="p-7 space-y-3">
+                            <h3 class="font-couture text-2xl text-caviar-950">Bespoke French Balayage & Gloss</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Hand-painted sun-kissed dimension customized to your skin undertone. Finished with Parisian acidic gloss for liquid mirror reflection.
+                            </p>
+                            <div class="pt-2 text-xs text-stone-500 space-y-1.5">
+                                <div>• Includes Olaplex No. 1 & 2 bond protection</div>
+                                <div>• Seamless grow-out with zero harsh lines</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0 border-t border-stone-100 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-stone-400 uppercase tracking-wider block">Investment</span>
+                            <span class="text-base font-bold text-caviar-900">₹7,500 <span class="text-xs font-normal text-stone-500">onwards</span></span>
+                        </div>
+                        <button onclick="openModalWith('Bespoke French Balayage')" class="px-4 py-2 rounded-full bg-champagne-100 hover:bg-caviar-900 hover:text-champagne-300 text-caviar-900 text-xs font-bold transition-all">
+                            Reserve Service ➔
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2: Russian Manicure -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 soft-glow flex flex-col justify-between card-lift group">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Russian Manicure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-champagne-500 text-caviar-950 font-bold text-[10px] uppercase tracking-wider px-3.5 py-1 rounded-full">Viral Luxury</span>
+                        </div>
+                        <div class="p-7 space-y-3">
+                            <h3 class="font-couture text-2xl text-caviar-950">Russian Manicure & Polygel Art</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Ultra-clean electronic cuticle detailing paired with lightweight Japanese polygel sculpting, glazed chrome finish, and hand massage.
+                            </p>
+                            <div class="pt-2 text-xs text-stone-500 space-y-1.5">
+                                <div>• Lasts up to 5 weeks without chipping</div>
+                                <div>• Zero damage to natural nail matrix</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0 border-t border-stone-100 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-stone-400 uppercase tracking-wider block">Investment</span>
+                            <span class="text-base font-bold text-caviar-900">₹2,800 <span class="text-xs font-normal text-stone-500">onwards</span></span>
+                        </div>
+                        <button onclick="openModalWith('Russian Manicure & Nail Art')" class="px-4 py-2 rounded-full bg-champagne-100 hover:bg-caviar-900 hover:text-champagne-300 text-caviar-900 text-xs font-bold transition-all">
+                            Reserve Service ➔
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3: Hydrafacial & 24K Glow -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 soft-glow flex flex-col justify-between card-lift group">
+                    <div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Hydrafacial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-caviar-950 text-champagne-300 font-bold text-[10px] uppercase tracking-wider px-3.5 py-1 rounded-full">Red Carpet</span>
+                        </div>
+                        <div class="p-7 space-y-3">
+                            <h3 class="font-couture text-2xl text-caviar-950">Hydrafacial MD 24K Gold Glow</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Medical-grade vortex pore extraction, hyaluronic acid peptide infusion, and a pure 24K gold collagen mask for luminous glass skin.
+                            </p>
+                            <div class="pt-2 text-xs text-stone-500 space-y-1.5">
+                                <div>• Instant red-carpet radiant glow</div>
+                                <div>• Zero redness or downtime</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0 border-t border-stone-100 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-stone-400 uppercase tracking-wider block">Investment</span>
+                            <span class="text-base font-bold text-caviar-900">₹4,999 <span class="text-xs font-normal text-stone-500">/ session</span></span>
+                        </div>
+                        <button onclick="openModalWith('Hydrafacial MD 24K Gold')" class="px-4 py-2 rounded-full bg-champagne-100 hover:bg-caviar-900 hover:text-champagne-300 text-caviar-900 text-xs font-bold transition-all">
+                            Reserve Service ➔
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Royal Bridal Suite (High-Ticket Packages) -->
+    <section id="bridal" class="py-24 bg-caviar-950 text-stone-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <div class="max-w-2xl mx-auto text-center mb-16 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-champagne-400 bg-caviar-900 px-3.5 py-1.5 rounded-full border border-champagne-700/50">Couture Bridal & Groom</span>
+                <h2 class="font-couture text-4xl sm:text-6xl font-normal text-white">The Royal Bridal Atelier</h2>
+                <p class="text-stone-400 text-sm">Engineered for destination and heritage weddings. Weather-proof HD airbrush formulations.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Package 1: Engagement / Sangeet -->
+                <div class="bg-caviar-900/80 rounded-3xl p-8 border border-caviar-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold text-champagne-400 uppercase tracking-widest">Cocktail & Sangeet</span>
+                        <h4 class="font-couture text-2xl text-white">The Starlight Glow</h4>
+                        <div class="text-3xl font-couture font-bold text-white">₹14,500 <span class="text-xs font-sans text-stone-400 font-normal">/ function</span></div>
+                        <p class="text-xs text-stone-400 leading-relaxed">Glamorous soft-glam evening look designed for heavy party lighting and flash photography.</p>
+                        <ul class="text-xs text-stone-300 space-y-2.5 pt-2">
+                            <li class="flex items-center gap-2">✓ HD Long-wear Foundation & Airbrush finish</li>
+                            <li class="flex items-center gap-2">✓ Designer Hair Extensions & Textured Curls</li>
+                            <li class="flex items-center gap-2">✓ Dupatta / Saree Draping & Styling</li>
+                            <li class="flex items-center gap-2">✓ Premium 3D Mink Lashes Included</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModalWith('The Starlight Glow (Sangeet)')" class="w-full py-3.5 rounded-full bg-caviar-800 hover:bg-champagne-500 hover:text-caviar-950 text-white font-bold text-xs tracking-wider uppercase transition-all">
+                        Reserve Cocktail Look
+                    </button>
+                </div>
+
+                <!-- Package 2: The Signature Royal Bride (Highlighted) -->
+                <div class="bg-gradient-to-b from-champagne-100 to-white text-caviar-950 rounded-3xl p-8 border-2 border-champagne-400 flex flex-col justify-between space-y-6 relative shadow-2xl">
+                    <span class="absolute -top-3.5 right-6 bg-caviar-950 text-champagne-300 text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full">Signature Choice</span>
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold text-champagne-700 uppercase tracking-widest">Main Wedding Day</span>
+                        <h4 class="font-couture text-3xl text-caviar-950">The Royal Maharani</h4>
+                        <div class="text-3xl font-couture font-bold text-caviar-950">₹24,500 <span class="text-xs font-sans text-stone-500 font-normal">/ complete ritual</span></div>
+                        <p class="text-xs text-stone-600 leading-relaxed">Complete bridal transformation in our private VIP bridal sanctum with dedicated stylist team.</p>
+                        <ul class="text-xs text-stone-800 space-y-2.5 pt-2 font-medium">
+                            <li class="flex items-center gap-2">✓ 18-Hour Waterproof Ultra-HD Airbrush Base</li>
+                            <li class="flex items-center gap-2">✓ Trousseau, Bridal Jewelry & Matha Patti Setting</li>
+                            <li class="flex items-center gap-2">✓ Bespoke Bridal Hairdo with Fresh Floral Art</li>
+                            <li class="flex items-center gap-2">✓ Body Highlighter & Collarbone Glow</li>
+                            <li class="flex items-center gap-2">✓ Complimentary Pre-Bridal Glow Facial (Worth ₹4,000)</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModalWith('The Royal Maharani Bridal Package')" class="w-full py-3.5 rounded-full bg-caviar-950 hover:bg-caviar-800 text-champagne-300 font-bold text-xs tracking-wider uppercase transition-all shadow-md">
+                        Reserve Bridal Sanctum
+                    </button>
+                </div>
+
+                <!-- Package 3: Groom Imperial -->
+                <div class="bg-caviar-900/80 rounded-3xl p-8 border border-caviar-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold text-champagne-400 uppercase tracking-widest">Gentleman Groom</span>
+                        <h4 class="font-couture text-2xl text-white">The Imperial Groom</h4>
+                        <div class="text-3xl font-couture font-bold text-white">₹11,500 <span class="text-xs font-sans text-stone-400 font-normal">/ full grooming</span></div>
+                        <p class="text-xs text-stone-400 leading-relaxed">Refined, camera-ready grooming tailored for the modern groom with zero cakey finish.</p>
+                        <ul class="text-xs text-stone-300 space-y-2.5 pt-2">
+                            <li class="flex items-center gap-2">✓ HD Camera Matte Skin Complexion Prep</li>
+                            <li class="flex items-center gap-2">✓ Signature Hair Styling & Texturizing</li>
+                            <li class="flex items-center gap-2">✓ Precision Beard Architecture & Shave</li>
+                            <li class="flex items-center gap-2">✓ Charcoal Detox Facial & Head Massage</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModalWith('The Imperial Groom Package')" class="w-full py-3.5 rounded-full bg-caviar-800 hover:bg-champagne-500 hover:text-caviar-950 text-white font-bold text-xs tracking-wider uppercase transition-all">
+                        Reserve Groom Ritual
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Artists & Directors -->
+    <section id="artists" class="py-24 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center mb-16 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-champagne-700 bg-champagne-100 px-3.5 py-1.5 rounded-full border border-champagne-200">World-Trained Mentors</span>
+                <h2 class="font-couture text-3xl sm:text-5xl font-normal text-caviar-950">Led by Master Beauty Directors</h2>
+                <p class="text-stone-500 text-sm">Alumni of Toni & Guy London, Vidal Sassoon, and leading Bollywood couture makeup teams.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                
+                <!-- Artist 1 -->
+                <div class="bg-blush-50 rounded-3xl p-8 border border-stone-200 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Zoya Mehra" class="w-32 h-32 rounded-2xl object-cover border-2 border-champagne-400 shrink-0">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-700">Artistic Bridal Director</span>
+                        <h3 class="font-couture text-2xl text-caviar-950">Zoya Mehra</h3>
+                        <p class="text-xs text-stone-500 font-semibold">Celebrity Makeup Artist • 12+ Years Experience</p>
+                        <p class="text-xs text-stone-600 leading-relaxed pt-1">
+                            Styled over 650 luxury brides across Udaipur, Jaipur, and Dubai. Known for iconic skin-finish bridal aesthetics that photograph flawlessly in sunlight.
+                        </p>
+                        <button onclick="openModalWith('Bridal Consultation with Zoya')" class="text-xs font-bold text-caviar-900 hover:text-champagne-600 hover:underline pt-2 block">
+                            Book with Zoya ➔
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Artist 2 -->
+                <div class="bg-blush-50 rounded-3xl p-8 border border-stone-200 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Arjun Kapoor" class="w-32 h-32 rounded-2xl object-cover border-2 border-champagne-400 shrink-0">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-700">Creative Hair Director</span>
+                        <h3 class="font-couture text-2xl text-caviar-950">Arjun Rathore</h3>
+                        <p class="text-xs text-stone-500 font-semibold">Toni & Guy London Master Colorist</p>
+                        <p class="text-xs text-stone-600 leading-relaxed pt-1">
+                            Pioneer of precision haircutting and bespoke French Balayage in North India. Creator of effortless, textured hairstyles tailored to facial bone structures.
+                        </p>
+                        <button onclick="openModalWith('Hair Styling with Arjun')" class="text-xs font-bold text-caviar-900 hover:text-champagne-600 hover:underline pt-2 block">
+                            Book with Arjun ➔
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Location & Experience Timings -->
+    <section class="py-20 bg-blush-100 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <div class="p-7 bg-white rounded-3xl border border-stone-200 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-champagne-700">Atelier Locations</span>
+                    <h4 class="font-couture text-2xl text-caviar-950">C-Scheme, Jaipur & GK-2, South Delhi</h4>
+                    <p class="text-xs text-stone-500 leading-relaxed">Level 1, Heritage Galleria, Central Boulevard. Dedicated valet parking and private elevator access.</p>
+                </div>
+
+                <div class="p-7 bg-white rounded-3xl border border-stone-200 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-champagne-700">Atelier Hours</span>
+                    <h4 class="font-couture text-2xl text-caviar-950">Tuesday - Sunday: 10 AM to 9 PM</h4>
+                    <p class="text-xs text-stone-500 leading-relaxed">Monday: Reserved exclusively for destination bridal party shoots and VIP bookings.</p>
+                </div>
+
+                <div class="p-7 bg-white rounded-3xl border border-stone-200 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-champagne-700">Concierge Helpline</span>
+                    <h4 class="font-couture text-2xl text-caviar-950">+91 98765 43210</h4>
+                    <p class="text-xs text-stone-500 leading-relaxed">Direct WhatsApp booking assistance available for wedding calendar reservations and trials.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-caviar-950 text-stone-400 py-12 border-t border-caviar-800 text-xs">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="font-couture text-white text-xl tracking-widest font-normal">AURA HAUTE ATELIER</span>
+                <p class="text-stone-500 text-[11px] mt-0.5">© 2026 Aura Luxury Beauty & Hair Care Pvt. Ltd. All rights reserved.</p>
+            </div>
+            <div class="flex gap-6 text-stone-400 text-xs">
+                <a href="#services" class="hover:text-champagne-400">Hair & Color</a>
+                <a href="#bridal" class="hover:text-champagne-400">Bridal Suite</a>
+                <a href="#artists" class="hover:text-champagne-400">Artists</a>
+                <a href="javascript:void(0)" onclick="openModal()" class="hover:text-white font-bold text-champagne-400">Reserve Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Sticky Concierge Bar for Mobile -->
+    <div class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-stone-200 py-3 px-4 flex items-center justify-between gap-3 sm:hidden z-50 soft-glow">
+        <a href="tel:+919876543210" class="flex-1 py-3 rounded-full bg-stone-100 text-caviar-900 font-bold text-xs flex items-center justify-center gap-2">
+            <span>📞 Call Salon</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Hello%20AURA%20Atelier,%20I%20would%20like%20to%20reserve%20an%20appointment." target="_blank" class="flex-1 py-3 rounded-full bg-caviar-950 text-champagne-300 font-bold text-xs flex items-center justify-center gap-2 shadow-sm">
+            <span>💬 WhatsApp Concierge</span>
+        </a>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-caviar-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 relative soft-glow border border-stone-200 animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-stone-400 hover:text-caviar-900 p-1 font-bold text-lg">
+                ✕
+            </button>
+            <div class="text-center mb-6 space-y-1">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-champagne-700">Concierge Reservation</span>
+                <h3 class="font-couture text-3xl text-caviar-950 font-normal">Reserve Your Experience</h3>
+                <p class="text-xs text-stone-500">Confirmed on WhatsApp within 10 minutes.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">Your Full Name</label>
+                    <input type="text" id="mName" required placeholder="e.g. Radhika Seth" class="w-full px-4 py-3 rounded-xl bg-blush-50 border border-stone-200 text-caviar-950 focus:outline-none focus:border-champagne-600 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">WhatsApp Mobile Number</label>
+                    <input type="tel" id="mPhone" required placeholder="e.g. 9876543210" class="w-full px-4 py-3 rounded-xl bg-blush-50 border border-stone-200 text-caviar-950 focus:outline-none focus:border-champagne-600 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">Service / Bridal Package</label>
+                    <input type="text" id="mTreatment" placeholder="e.g. French Balayage, Royal Bridal Suite" class="w-full px-4 py-3 rounded-xl bg-blush-50 border border-stone-200 text-caviar-950 focus:outline-none focus:border-champagne-600 text-sm">
+                </div>
+                <button type="submit" class="w-full py-4 rounded-full bg-caviar-950 hover:bg-caviar-800 text-champagne-300 font-bold text-xs tracking-wider uppercase transition-all shadow-md">
+                    Send Reservation Request ➔
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function openModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function openModalWith(treatment) {
+            document.getElementById('mTreatment').value = treatment;
+            openModal();
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function handleQuickBook() {
+            const service = document.getElementById('quickService').value;
+            const phone = document.getElementById('quickPhone').value;
+            if (!phone) {
+                alert('Please enter your WhatsApp mobile number.');
+                return;
+            }
+            const msg = `Hello AURA Luxury Atelier, I would like to check availability for:\nService: ${service}\nPhone: ${phone}`;
+            const url = `https://wa.me/919876543210?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('mName').value;
+            const phone = document.getElementById('mPhone').value;
+            const service = document.getElementById('mTreatment').value || 'Haute Atelier Experience';
+            
+            const msg = `Hello AURA Luxury Atelier, I would like to reserve an appointment.\nName: ${name}\nPhone: ${phone}\nService: ${service}`;
+            const url = `https://wa.me/919876543210?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+            closeModal();
+        }
+    </script>
+</body>
+</html>
